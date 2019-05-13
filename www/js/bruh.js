@@ -1,3 +1,4 @@
+let variable1 = 1;
 let r1;
 let r2;
 let r3;

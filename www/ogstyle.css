@@ -1007,7 +1007,19 @@ height: 9px;
 	color:#1b6195;
 }
 
-
+.ogcenterediframe{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.ogcenterediframe iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 
 

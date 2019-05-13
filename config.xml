@@ -7,11 +7,11 @@
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
     </author>
-    <content src="index.html" />
+    
     <access origin="*" />
     <allow-navigation href="*" />
     <allow-intent href="*" />
-    <icon src="icon.png" />
+    <icon src="WWW/icon.png" />
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-geolocation" source="npm" />
 </widget>

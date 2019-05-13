@@ -1,0 +1,1013 @@
+/*PAGINA MAIN*/
+.ogcontainer{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #c3e3f4;
+}
+.ogbuttoncontainer{
+	width: 35%;
+	height: 100px;
+	padding-top: 10px;
+	display: block;
+	margin: 0 auto;
+
+}
+.ogbuttoncontainer2{
+	width: 50%;
+	
+	padding-top: 10px;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+.ogcontainer2{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #465d88;
+}
+.ogcontainer3{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #465d88;
+}
+.ogimginicio{
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+	padding-top:30%;
+	text-align: center;
+}
+.ogimgin{
+	width: 100%;
+	max-width: 600px;
+}
+.ogimgcontainer{
+	
+	width: 300px;
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+	margin-bottom:1px;
+	text-align: center;
+}
+.ogimg{
+	width: 100%;
+}
+
+.ogunit{
+	width: 100%;
+	min-height: 65px;
+	background-color: white;
+	display: flex;
+	flex-wrap: wrap;
+}
+.ogleftimgcontainer{
+	width:32px;
+	margin:0;
+	margin: auto 0px;
+}
+.ogiconoclase{
+	width: 100%;
+
+}
+.ogtitle{
+	width: 75%;
+	margin: auto 0px;
+	margin-left: 10px;
+}
+.ogh1{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.3em;
+padding-bottom: 4px;
+	
+}
+.ogiconcontainer{
+	text-align: right;
+	width:30px;
+	margin:0;
+	margin: auto 0px;
+
+}
+.ogicon{
+	font-size: 100px;
+
+}
+#ogsegment{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top:0px;
+	margin-bottom:10px;
+}
+
+#ogheader{
+	color:#465d88;
+}
+
+
+.ogheader{
+	background-color: #465d88;
+	width: 100%;
+	min-height: 120px;
+}
+/*.ogh1{
+	font-size: 5em;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#ffffff;
+	padding: 8px;
+	text-align: center;
+}	*/
+.iconoclase{
+	width:25px;
+}
+.oga{
+	padding: 0 5px;
+	text-decoration: none;
+	font-size: 1.9em;
+	color:black;
+	width: 100px;
+}
+#righticon{
+	right: 10px;
+}
+.ogfixed{
+	padding-bottom: 14px;
+	background-color: white;
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+}
+.ogtopmargin{
+	padding-top: 70px;
+}
+.ogtopmargin2{
+	padding-top: 104px;
+}
+.ogtopmargin3{
+	padding-top: 150px;
+}
+.ogtopmargin4{
+	padding-top: 120px;
+}
+#ogbuttonmargin{
+	margin-top: 3px;
+	margin-bottom: 3px; 
+}
+					#ogbutton0{
+						margin-top: 3px;
+						margin-bottom: 3px; 
+					}
+					#ogbutton1{
+						margin-top: 3px;
+						margin-bottom: 3px; 
+					}
+					#ogbutton2{
+						margin-top: 3px;
+						margin-bottom: 3px; 
+					}
+					#ogbutton3{
+						margin-top: 3px;
+						margin-bottom: 3px; 
+					}
+					#ogbutton4{
+						margin-top: 3px;
+						margin-bottom: 3px; 
+					}
+					#ogbutton5{
+						margin-top: 3px;
+						margin-bottom: 3px; 
+					}
+					#ogbutton6{
+						margin-top: 3px;
+						margin-bottom: 3px; 
+					}
+					#ogbutton7{
+						margin-top: 3px;
+						margin-bottom: 3px; 
+					}
+					#ogbutton8{
+						margin-top: 3px;
+						margin-bottom: 3px; 
+					}
+					#ogbutton9{
+						margin-top: 3px;
+						margin-bottom: 3px; 
+					}
+					.ognextex{
+						display: none;
+					}
+.ogtext{
+	margin-bottom: 1px;
+	margin-left: 5px;
+	font-weight: bold;
+}
+.ogcentered{
+
+	text-align: center;
+}
+.ogcenteredvideo{
+	width: 100%;
+	height: 0;
+	text-align: center;
+	padding-bottom: 56.25%;
+	position: relative;
+}
+.ogcenteredvideo iframe{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.og100{
+	width: 100%;
+}
+.ogvocfixed{
+	padding-top: 68px;
+	padding-left: 1em;
+	padding-right:1em;
+	
+	width: 100%;
+	z-index: 10;
+	position: fixed;
+}
+.ogexpressions{
+	display:none;
+}
+
+
+
+
+
+.oggroup{
+	width: 100%;
+	text-align: center;
+	flex-wrap: wrap;
+}
+.ogword{
+	width: 50%;
+	margin-bottom: 20px;
+	padding: 0px;
+	float: left;
+}
+.ogwordimg{
+	width: 10em;
+}
+.ogwordtext{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.oggroup2, .oggroup3, .oggroup4{
+	width: 100%;
+	text-align: center;
+	flex-wrap: wrap;
+	display: none;
+}
+
+#ogtext, #ogtext2{
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 250%;
+}
+
+#ognext{
+	
+}
+.oginstructionssegment{
+	background-color: #f5f5f5;
+	padding: 8px;
+	border-radius: 5px;
+}
+.ogtitle2{
+
+	font-size: 20px;
+	color:#465d88;
+	margin-bottom: 6px;
+}
+.ogspace{
+	width: 40px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: lightgray;
+	color:blue;
+	border: 4px solid #1b6195;
+	outline: none;
+}
+.ogspace2{
+	width: 40px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: lightgray;
+	color:blue;
+	border: none;
+	outline: none;
+}
+.ogspace3{
+	width: 105px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: lightgray;
+	color:blue;
+	border: none;
+	outline: none;
+}
+.ogspace4{
+	width: 40px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: lightgray;
+	color:blue;
+	border: none;
+	outline: none;
+}
+.ogspace5{
+	width: 90px;
+	height: 60px;
+	border-radius: 5px;
+	background-color: lightgray;
+	color:blue;
+	border: none;
+	outline: none;
+}
+
+.ogmidsection{
+	width:100%;
+
+}
+.ogmidsection2{
+	width: 80%;
+	margin: auto;
+}
+.oganswers{
+	width: 80%;
+	margin: auto;
+}
+#abutton, #anbutton, #thebutton{
+
+}
+
+
+.ogcenter1{
+	width: 90%;
+	margin: auto;
+	background-color: orange;
+	margin: 0px;
+}
+
+.ogcenter2{
+	width: 30%;
+	float: left;
+	background-color: green;
+	margin: 5px;
+}
+.ogcentered2{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+.ogcentered3{
+	position: fixed;
+	left: 50%;
+	top:80%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+.ogbox1{
+	display: inline-block;
+	height: 20px;
+	width: 6.5em;
+}
+.ogbox2{
+	margin-top: 12px;
+}
+
+.ogbox3{
+	width: 19.7em;
+	margin-top: 12px;
+}
+.ogbox4{
+	display: inline-block;
+	height: 20px;
+	width: 10em;
+	margin: 0px 2px;
+}
+.ogbox5{
+	display: inline-block;
+	height: 20px;
+	width: 10em;
+	margin-top: 12px;
+	margin-bottom: 7px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+.ogbox6{
+	display: inline-block;
+	height: 20px;
+	width: 6em;
+	margin: 0px 2px;
+}
+
+
+/*------------NEW MENU----------------*/
+
+.ogmodulecontainer{
+	width: 100%;
+
+	text-align: center;
+}
+
+.ogmodule{
+	width: 65px;
+	margin: 10px 2em;
+	text-align: center;
+	display: inline-block;
+
+}
+.ogmenuimg{
+	width: 100%;
+}
+.ogmodule h4{
+	margin: 5px;
+}
+
+
+/*------------try 2 MENU----------------*/
+/*.ogcontmod{
+	margin-left: 8%;
+}
+.ogmod{
+	width: 65px;
+	margin: 10px 5%;
+	text-align: center;
+	float: left;
+}
+.ogmod h5{
+	margin: 3px;
+}
+*/
+
+.ogcontmod{
+/*	position: absolute;
+	left: 50%;
+	margin-left: -135px;*/
+	text-align: center;
+	width: 100%;
+height: 100px;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.ogcontmod2{
+	position: absolute;
+	margin-top: 30em;
+	left: 50%;
+	margin-left: -135px;
+	/*z-index: -10;*/
+}
+.ogcontmodn{
+	text-align: center;
+	width: 100%;
+height: 100px;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+	/*z-index: -10;*/
+}.ogtitlecontainer{
+
+
+}
+.ogrow{
+
+}
+.ogmod{
+	width: 60px;
+	/*margin: 10px 15px;*/
+	margin: 4% 4%;
+	display: inline-block;
+
+}
+.ogmod2{
+	width: 150px;
+	margin: 4% 4%;
+	display: inline-block;
+}
+.ogmodn{
+	width: 8em;
+	/*margin: 10px 15px;*/
+	margin: 4% 4%;
+	display: inline-block;
+}
+.ogmod h5{
+	margin: 3px;
+}
+
+
+/*------------NEW DESIGN----------------*/
+
+.ogheader2{
+	background-color: #00a991;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 1000;
+	
+}
+.ogheader2a{
+	background-color: #96c11f;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 1000;
+}
+.ogheader3{
+	background-color: #ffb720;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 1000;
+}
+.ogheader4{
+	background-color: #ef7c48;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 1000;
+}
+.ogheader5{
+	background-color: #ec5f78;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 1000;
+}
+.ogheader6{
+	background-color: #9f4878;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 1000;
+}
+.ogheader7{
+	background-color: #725191;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 1000;
+}
+.ogheader8{
+	background-color: #5c5ba5;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 1000;
+}
+.ogheader9{
+	background-color: #00a5c2;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 1000;
+}
+.ogheader10{
+	background-color: #0075be;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 1000;
+}
+
+.ogheadermenu{
+	background-color: #1b6195;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 1000;
+}
+
+.ogheaderh1{
+	color:white;
+	float: left;
+	margin: 13px 30px;
+	font-size: 19px;
+	
+
+}
+
+.ogheaderh12{
+	color:white;
+	position: absolute;
+	left: 50%;
+	top: 25%;
+
+
+margin-left: -136px;
+
+	font-size: 18px;
+	
+
+}
+.ogheaderimg{
+
+	width: 24px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 13px;
+}
+.ogseparation{
+	height: 7em;
+}
+.ogseparation2{
+	height: 3.5em;
+}
+.ogsection{
+	width: 100%;
+	margin:5px 0px;
+	text-align: center;
+}
+.ogsection img{
+	width: 95%;
+}
+.ogtitles{
+
+	font-weight: bold;
+	color: #1b6195;
+	padding-top: 0.5em;
+
+}
+
+.ogmidtitle{
+	width: 100%;
+	text-align: center;
+}
+.ogmidtitle2{
+	width: 100%;
+	text-align: center;
+	padding-top: 0.9em;
+	position: fixed;
+	top: 3.5em;
+	z-index: 1000;
+	background-color: white;
+}
+.ogmidtitle h2{
+	font-weight: 900;
+	font-size: 1.4em;
+	color: #1b6195;
+	padding-top: 0.9em;
+	margin-bottom: 0px;
+	
+}
+.ogmidtitle2 h2{
+	font-weight: 900;
+	font-size: 1.4em;
+	color: #1b6195;
+	margin: 0px;
+}
+.ogmidtitle2 h3{
+	font-weight: 100;
+	font-size: 1.3em;
+	color: #1b6195;
+	margin: 0px;
+}
+
+.ogmidtitle h3{
+	font-size: 1.1em;
+	font-weight: 100;
+	color: #1b6195;
+	margin-top: 0px;
+	margin-bottom: 0.5em;
+	
+}
+.ogwhiteshield{
+	width: 100%;
+	height: 10%;
+	position: fixed;
+	bottom: 0%;
+	background-color: white;
+}
+.ogmidbuttons{
+	width: 100%;
+	margin-top: 10px;
+	text-align: center;
+	position: fixed;
+	bottom: 5%;
+
+}
+.ogmidbuttons button{
+	width: 12em;
+
+
+}
+.oggreenred{
+	margin: 5px 6px;
+	float: left;	
+	padding-top: 2px;
+}
+.oganswer{
+	font-size: 16px;
+	padding-bottom: 5px;
+
+}
+.oganswerrow{
+	width: 100%;
+	margin-right: 500px;
+}
+.ogendcont{
+position: fixed;
+bottom: 0px;
+width: 100%;
+height: 20%;
+}
+.ogendcont2{
+position: fixed;
+bottom: 0px;
+height: 20%;
+
+}
+.ogendimg{
+width: 100%;
+}
+.ogendtext{
+	right: 8%;
+	position: fixed;
+	bottom: 5%;
+	text-align: center;
+}
+.ogendtext h2{
+	font-size: 3.5em;
+color: white;
+margin-bottom: 0px;
+}
+.ogendtext h3{
+	margin-top: 0px;
+	font-size: 1.5em;
+	color: white;
+}
+.ogimgcontainer{
+	width: 90%;
+	padding: 5px;
+
+}
+.ogscroll{
+
+	text-align: justify;
+	z-index: -1000;
+}
+.ogcenteredtriple
+{
+	width: 100%;
+	margin-bottom: 32px;
+	padding-left: 8px;
+	text-align: center;
+}
+.ogcenteredtriple2
+{
+	padding-left: 8px;
+	text-align: center;
+	margin-bottom: 30px;
+
+}
+.ogtripletitle
+{
+	padding-left: 5%;
+	width: 100%;
+
+}
+.ogtriple
+{
+	float: left;
+	width: 33.3%;
+	font-weight: bold;
+}
+.ogtriple2
+{
+	float: left;
+	padding-right: 5px;
+	font-weight: bold;
+	color:#ffb720;
+}
+.ogtriple22
+{
+	float: left;
+	padding-right: 5px;
+	font-weight: bold;
+	color:#ef7c48;
+}
+.ogtriple25
+{
+	float: left;
+	padding-right: 5px;
+	font-weight: bold;
+	color:#ec5f78;
+}
+
+.ogtriple3
+{
+	font-weight: bold;
+}
+.ogtriple4
+{
+	float: left;
+	width: 33.3%;
+	font-weight: bold;
+	color:#ffb720;
+}
+.ogtriple42
+{
+	float: left;
+	width: 33.3%;
+	font-weight: bold;
+	color:#ef7c48;
+}
+.ogtriple45
+{
+	float: left;
+	width: 33.3%;
+	font-weight: bold;
+	color:#ec5f78;
+}
+.ogtriple5
+{
+	float: left;
+	padding-right: 0px;
+	font-weight: 900;
+	color:#ffb720;
+}
+.ogtriple6
+{
+	float: left;
+	font-weight: 900;	
+	padding-right: 5px;
+}
+.ogtriple7
+{
+	float: left;
+	padding-left: 5px;
+	font-weight: 900;
+}
+.ogtriple8
+{
+	float: left;
+	padding-left: 1px;
+	font-weight: 900;
+}
+.ogtriple9
+{
+	float: left;
+	padding-right: 0px;
+	font-weight: 900;
+	color:#ef7c48;
+}
+.ogtriplen5
+{
+	float: left;
+	padding-right: 0px;
+	font-weight: 900;
+	color:#ec5f78;
+}
+
+.ognofloat
+{
+	float: none;
+}
+
+
+
+.ogspacer
+{
+height: 30px;
+}
+.ogspacer2
+{
+height: 9px;
+}
+
+
+
+
+.ogtriplea6
+{
+	float: left;
+	padding-right: 5px;
+	font-weight: bold;
+	color:#9f4878;
+}
+.ogtripleb6
+{
+	float: left;
+	width: 33.3%;
+	font-weight: bold;
+	color:#9f4878;
+}
+.ogtriplec6
+{
+	float: left;
+	padding-right: 0px;
+	font-weight: 900;
+	color:#9f4878;
+}
+/*Colores Unit7*/
+.ogtriplea7
+{
+	float: left;
+	padding-right: 5px;
+	font-weight: bold;
+	color:#725191;
+}
+.ogtripleb7
+{
+	float: left;
+	width: 33.3%;
+	font-weight: bold;
+	color:#725191;
+}
+.ogtriplec7
+{
+	float: left;
+	padding-right: 0px;
+	font-weight: 900;
+	color:#725191;
+}
+/*Colores Unit8*/
+.ogtriplea8
+{
+	float: left;
+	padding-right: 5px;
+	font-weight: bold;
+	color:#5c5ba5;
+}
+.ogtripleb8
+{
+	float: left;
+	width: 33.3%;
+	font-weight: bold;
+	color:#5c5ba5;
+}
+.ogtriplec8
+{
+	float: left;
+	padding-right: 0px;
+	font-weight: 900;
+	color:#5c5ba5;
+}
+/*Colores Unit9*/
+.ogtriplea9
+{
+	float: left;
+	padding-right: 5px;
+	font-weight: bold;
+	color:#00a5c2;
+}
+.ogtripleb9
+{
+	float: left;
+	width: 33.3%;
+	font-weight: bold;
+	color:#00a5c2;
+}
+.ogtriplec9
+{
+	float: left;
+	padding-right: 0px;
+	font-weight: 900;
+	color:#00a5c2;
+}
+/*Colores Unit10*/
+.ogtriplea10
+{
+	float: left;
+	padding-right: 5px;
+	font-weight: bold;
+	color:#0075be;
+}
+.ogtripleb10
+{
+	float: left;
+	width: 33.3%;
+	font-weight: bold;
+	color:#0075be;
+}
+.ogtriplec10
+{
+	float: left;
+	padding-right: 0px;
+	font-weight: 900;
+	color:#0075be;
+}
+.ogtriplecp
+{
+	float: left;
+	padding-right: 0px;
+	font-weight: 900;
+	color:#1b6195;
+}
+
+
+
+
+

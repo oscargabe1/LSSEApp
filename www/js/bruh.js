@@ -2489,6 +2489,14 @@ function checkFrase(){
 
 	if (ExUnits==1) {banner = "banner1";}
 	else if (ExUnits==2) {banner = "banner2";}
+	else if (ExUnits==3) {banner = "banner3";}
+	else if (ExUnits==4) {banner = "banner4";}
+	else if (ExUnits==5) {banner = "banner5";}
+	else if (ExUnits==6) {banner = "banner6";}
+	else if (ExUnits==7) {banner = "banner7";}
+	else if (ExUnits==8) {banner = "banner8";}
+	else if (ExUnits==9) {banner = "banner9";}
+	else if (ExUnits==10) {banner = "banner10";}
 
 
 

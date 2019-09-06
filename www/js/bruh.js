@@ -30,10 +30,25 @@ let unit9answers1;
 let unit9answers2;
 let unit10answers1;
 let unit10answers2;
+let unit11answers1;
+let unit11answers2;
+let unit12answers1;
+let unit12answers2;
+let unit16answers1;
+let unit16answers2;
+let unit19answers1;
+let unit19answers2;
 let getIns;
 let ExUnits;
 let numerodecorrectas = 0;
 
+
+
+
+function checkWriter(){
+	let getNextB = document.querySelector("#ogdiss2");
+	getNextB.className="fluid ui blue button";
+}
 
 function ExUnit1(){
 	ExUnits = 1;
@@ -65,25 +80,44 @@ function ExUnit9(){
 function ExUnit10(){
 	ExUnits = 10;
 }
+function ExUnit11(){
+	ExUnits = 11;
+}
+function ExUnit12(){
+	ExUnits = 12;
+}
+function ExUnit16(){
+	ExUnits = 16;
+}
+function ExUnit19(){
+	ExUnits = 19;
+}
 function CheckGenero(){
 	if (ExUnits == 1 && ExType == 2  || ExUnits == 9 && ExType == 1) {
 		console.log("tipo3");
 		ExGenero = "3r";
 	}
-	else if (ExUnits == 1 && ExType == 3 || ExUnits == 7 && ExType == 3) {
+	else if (ExUnits == 1 && ExType == 3 || ExUnits == 7 && ExType == 3 || ExUnits == 11 && ExType == 3) {
 		console.log("tipo4");
 		ExGenero = "4r";
 	}
 	else if (ExUnits == 3 && ExType == 2 || ExUnits == 5 && ExType == 1 || ExUnits == 7 && ExType == 1
-			|| ExUnits == 7 && ExType == 2 || ExUnits == 8 && ExType == 1 || ExUnits == 8 && ExType == 2) {
+			|| ExUnits == 7 && ExType == 2 || ExUnits == 8 && ExType == 1 || ExUnits == 8 && ExType == 2 
+		    || ExUnits == 11 && ExType == 1 || ExUnits == 11 && ExType == 2 || ExUnits == 19 && ExType == 1 ){
 		console.log("tiposubrayar");
 	ExGenero = "subr";
 	}
 	else if (ExUnits==3 && ExType ==3) {ExGenero = "multr"; console.log(ExGenero);}
+
+	else if (ExUnits == 12 && ExType == 1 || ExUnits == 12 && ExType == 2 || ExUnits == 16 && ExType == 2) {
+		console.log("writer");
+		ExGenero = "writer";
+	}
 	else{
 		console.log("tipo2");
 		ExGenero = "2r";
 	}
+
 }
 
 function Calculate(){
@@ -332,12 +366,97 @@ function Calculate(){
 	else if (currentex == '10 1 8') {show = 'We do not have <button class="ogspace3">?</button> problem.'; r1 = 'some'; r2='any'}
 	else if (currentex == '10 1 9') {show = 'Is there <button class="ogspace3">?</button> reason for your delay?'; r1 = 'some'; r2='any'}
 
+//Intermedios
+
+	else if (currentex == '11 1 0') {show = 'novelist.<br><button class="ogspace3">?</button>'; n1='5'; r1 = 'Person'; r2='Place'; r3='Animal'; r4='Thing'; r5='Idea'}
+	else if (currentex == '11 1 1') {show = 'Richard.<br><button class="ogspace3">?</button>'; n1='5'; r1 = 'Person'; r2='Place'; r3='Animal'; r4='Thing'; r5='Idea'}
+	else if (currentex == '11 1 2') {show = 'freedom.<br><button class="ogspace3">?</button>'; n1='5'; r1 = 'Person'; r2='Place'; r3='Animal'; r4='Thing'; r5='Idea'}
+	else if (currentex == '11 1 3') {show = 'Boston.<br><button class="ogspace3">?</button>'; n1='5'; r1 = 'Person'; r2='Place'; r3='Animal'; r4='Thing'; r5='Idea'}
+	else if (currentex == '11 1 4') {show = 'whale.<br><button class="ogspace3">?</button>'; n1='5'; r1 = 'Person'; r2='Place'; r3='Animal'; r4='Thing'; r5='Idea'}
+	else if (currentex == '11 1 5') {show = 'Lincoln Park.<br><button class="ogspace3">?</button>'; n1='5'; r1 = 'Person'; r2='Place'; r3='Animal'; r4='Thing'; r5='Idea'}
+	else if (currentex == '11 1 6') {show = 'Santa Claus.<br><button class="ogspace3">?</button>'; n1='5'; r1 = 'Person'; r2='Place'; r3='Animal'; r4='Thing'; r5='Idea'}
+	else if (currentex == '11 1 7') {show = 'poem.<br><button class="ogspace3">?</button>'; n1='5'; r1 = 'Person'; r2='Place'; r3='Animal'; r4='Thing'; r5='Idea'}
+	else if (currentex == '11 1 8') {show = 'faith.<br><button class="ogspace3">?</button>'; n1='5'; r1 = 'Person'; r2='Place'; r3='Animal'; r4='Thing'; r5='Idea'}
+	else if (currentex == '11 1 9') {show = 'Daniel.<br><button class="ogspace3">?</button>'; n1='5'; r1 = 'Person'; r2='Place'; r3='Animal'; r4='Thing'; r5='Idea'}
+
+	else if (currentex == '11 2 0') {show = 'He came walking home by<br><button class="ogspace3">?</button>.'; n1='8'; r1 = 'myself'; r2='yourself'; r3='himself'; r4='herself'; r5='itself'; r6='ourselves'; r7='yourselves'; r8='themselves'}
+	else if (currentex == '11 2 1') {show = 'They were singing by<br><button class="ogspace3">?</button>.'; n1='8'; r1 = 'myself'; r2='yourself'; r3='himself'; r4='herself'; r5='itself'; r6='ourselves'; r7='yourselves'; r8='themselves'}
+	else if (currentex == '11 2 2') {show = 'I,<button class="ogspace3">?</button>read the whole book.'; n1='8'; r1 = 'myself'; r2='yourself'; r3='himself'; r4='herself'; r5='itself'; r6='ourselves'; r7='yourselves'; r8='themselves'}
+	else if (currentex == '11 2 3') {show = 'She went to the movies by<br><button class="ogspace3">?</button>.'; n1='8'; r1 = 'myself'; r2='yourself'; r3='himself'; r4='herself'; r5='itself'; r6='ourselves'; r7='yourselves'; r8='themselves'}
+	else if (currentex == '11 2 4') {show = 'We,<button class="ogspace3">?</button>raised enough money for John´s operation.'; n1='8'; r1 = 'myself'; r2='yourself'; r3='himself'; r4='herself'; r5='itself'; r6='ourselves'; r7='yourselves'; r8='themselves'}
+	else if (currentex == '11 2 5') {show = 'You guys are going to do it by<br><button class="ogspace3">?</button>.'; n1='8'; r1 = 'myself'; r2='yourself'; r3='himself'; r4='herself'; r5='itself'; r6='ourselves'; r7='yourselves'; r8='themselves'}
+	else if (currentex == '11 2 6') {show = 'It is not going to get done by<br><button class="ogspace3">?</button>.'; n1='8'; r1 = 'myself'; r2='yourself'; r3='himself'; r4='herself'; r5='itself'; r6='ourselves'; r7='yourselves'; r8='themselves'}
+	else if (currentex == '11 2 7') {show = 'She,<button class="ogspace3">?</button>presented the project.'; n1='8'; r1 = 'myself'; r2='yourself'; r3='himself'; r4='herself'; r5='itself'; r6='ourselves'; r7='yourselves'; r8='themselves'}
+	else if (currentex == '11 2 8') {show = 'We did it for<br><button class="ogspace3">?</button>.'; n1='8'; r1 = 'myself'; r2='yourself'; r3='himself'; r4='herself'; r5='itself'; r6='ourselves'; r7='yourselves'; r8='themselves'}
+	else if (currentex == '11 2 9') {show = 'I am going to keep it for<br><button class="ogspace3">?</button>.'; n1='8'; r1 = 'myself'; r2='yourself'; r3='himself'; r4='herself'; r5='itself'; r6='ourselves'; r7='yourselves'; r8='themselves'}
+
+	else if (currentex == '11 3 0') {show = '<button class="ogspace3">?</button> cat is my sister´s pet.'; ins2='NEAR'; r1 = 'This'; r2='These'; r3='That'; r4='Those'}	
+	else if (currentex == '11 3 1') {show = '<button class="ogspace3">?</button> books are mine.'; ins2='NEAR'; r1 = 'This'; r2='These'; r3='That'; r4='Those'}	
+	else if (currentex == '11 3 2') {show = '<button class="ogspace3">?</button> is Peter´s wallet.'; ins2='NEAR'; r1 = 'This'; r2='These'; r3='That'; r4='Those'}	
+	else if (currentex == '11 3 3') {show = '<button class="ogspace3">?</button> car is crashed.'; ins2='NEAR'; r1 = 'This'; r2='These'; r3='That'; r4='Those'}	
+	else if (currentex == '11 3 4') {show = '<button class="ogspace3">?</button> dresses are on sale.'; ins2='NEAR'; r1 = 'This'; r2='These'; r3='That'; r4='Those'}	
+	else if (currentex == '11 3 5') {show = '<button class="ogspace3">?</button> is the house that I live in.'; ins2='FAR'; r1 = 'This'; r2='These'; r3='That'; r4='Those'}	
+	else if (currentex == '11 3 6') {show = '<button class="ogspace3">?</button> are my shoes.'; ins2='FAR'; r1 = 'This'; r2='These'; r3='That'; r4='Those'}	
+	else if (currentex == '11 3 7') {show = '<button class="ogspace3">?</button> across the street are my neighbors.'; ins2='FAR'; r1 = 'This'; r2='These'; r3='That'; r4='Those'}	
+	else if (currentex == '11 3 8') {show = '<button class="ogspace3">?</button> is my baseball bat.'; ins2='FAR'; r1 = 'This'; r2='These'; r3='That'; r4='Those'}	
+	else if (currentex == '11 3 9') {show = '<button class="ogspace3">?</button> are my books.'; ins2='FAR'; r1 = 'This'; r2='These'; r3='That'; r4='Those'}	
 
 
+	else if (currentex == '12 1 0') {show = 'playing / He / is / in the park';}	
+	else if (currentex == '12 1 1') {show = 'the / meeting / They / are / attending';}	
+	else if (currentex == '12 1 2') {show = 'is / She / outside / smoking';}	
+	else if (currentex == '12 1 3') {show = 'accepting / the offer / Tom / is not';}	
+	else if (currentex == '12 1 4') {show = 'they / arriving / Are / at noon?';}	
+	else if (currentex == '12 1 5') {show = 'acting / They / in / the / play / are';}	
+	else if (currentex == '12 1 6') {show = 'until later / is not / She / coming';}	
+	else if (currentex == '12 1 7') {show = 'raining? / it / Is';}	
+	else if (currentex == '12 1 8') {show = 'boiling / are not / The / eggs';}
+	else if (currentex == '12 1 9') {show = 'assisting / Alice / is not / the doctor';}	
 
+	else if (currentex == '12 2 0') {show = 'biusy';}
+	else if (currentex == '12 2 1') {show = 'kandle';}
+	else if (currentex == '12 2 2') {show = 'cheise';}
+	else if (currentex == '12 2 3') {show = 'centurie';}
+	else if (currentex == '12 2 4') {show = 'kandie';}
+	else if (currentex == '12 2 5') {show = 'klass';}
+	else if (currentex == '12 2 6') {show = 'caike';}
+	else if (currentex == '12 2 7') {show = 'shapter';}
+	else if (currentex == '12 2 8') {show = 'churh';}
+	else if (currentex == '12 2 9') {show = 'cirkle';}	
 
+	else if (currentex == '16 1 0') {show = 'Susan <button class="ogspace3">?</button> change her eating habits or sooner or later she will get sick.'; r1 = 'must'; r2='may'}
+	else if (currentex == '16 1 1') {show = 'Tom <button class="ogspace3">?</button> play baseball like a professional.'; r1 = 'will'; r2='can'}
+	else if (currentex == '16 1 2') {show = 'I <button class="ogspace3">?</button> win if I´m lucky.'; r1 = 'might'; r2='have to'}
+	else if (currentex == '16 1 3') {show = 'It <button class="ogspace3">?</button> snow tomorrow according to the weather channel.'; r1 = 'could'; r2='has to'}
+	else if (currentex == '16 1 4') {show = 'You <button class="ogspace3">?</button> stay in bed; you have a terrible fever.'; r1 = 'could'; r2='ought to'}
+	else if (currentex == '16 1 5') {show = 'I <button class="ogspace3">?</button> stay in shape and do my daily exercises.'; r1 = 'can'; r2='should'}
+	else if (currentex == '16 1 6') {show = '<button class="ogspace3">?</button> I help you?'; r1 = 'would'; r2='may'}
+	else if (currentex == '16 1 7') {show = 'We <button class="ogspace3">?</button> arrive on time or we´ll lose the flight.'; r1 = 'have to'; r2='should'}
+	else if (currentex == '16 1 8') {show = '<button class="ogspace3">?</button> I borrow your car tonight? I have a date with Melissa.'; r1 = 'must'; r2='may'}
+	else if (currentex == '16 1 9') {show = '<button class="ogspace3">?</button> you please open the door for me? My hands are dity.'; r1 = 'would'; r2='should'}
 
+	else if (currentex == '16 2 0') {show = 'droer';}
+	else if (currentex == '16 2 1') {show = 'typorutinop';}
+	else if (currentex == '16 2 2') {show = 'lmaechnica';}
+	else if (currentex == '16 2 3') {show = 'kobo';}
+	else if (currentex == '16 2 4') {show = 'tionobserva';}
+	else if (currentex == '16 2 5') {show = 'ecdialm';}
+	else if (currentex == '16 2 6') {show = 'ormemy';}
+	else if (currentex == '16 2 7') {show = 'hoodneighrob';}
+	else if (currentex == '16 2 8') {show = 'egnshil';}
+	else if (currentex == '16 2 9') {show = 'scasl';}
 
+	
+	else if (currentex == '19 1 0') {show = 'Synonym for: step <br><button class="ogspace3">?</button>.'; n1='4'; r1 = 'box'; r2='foot'; r3='footstep'; r4='jump'}
+	else if (currentex == '19 1 1') {show = 'Synonym for: storm <br><button class="ogspace3">?</button>.'; n1='4'; r1 = 'explosion'; r2='tornado'; r3='lightning'; r4='summer'}
+	else if (currentex == '19 1 2') {show = 'Synonym for: strange <br><button class="ogspace3">?</button>.'; n1='4'; r1 = 'bizarre'; r2='unique'; r3='special'; r4='normal'}
+	else if (currentex == '19 1 3') {show = 'Synonym for: strenght <br><button class="ogspace3">?</button>.'; n1='4'; r1 = 'force'; r2='weak'; r3='fragile'; r4='speed'}
+	else if (currentex == '19 1 4') {show = 'Synonym for: stripe <br><button class="ogspace3">?</button>.'; n1='4'; r1 = 'round'; r2='triangle'; r3='line'; r4='square'}
+	else if (currentex == '19 1 5') {show = 'Synonym for: stubborn <br><button class="ogspace3">?</button>.'; n1='4'; r1 = 'obstinate'; r2='flexible'; r3='movable'; r4='easy'}
+	else if (currentex == '19 1 6') {show = 'Synonym for: superior <br><button class="ogspace3">?</button>.'; n1='4'; r1 = 'inferior'; r2='greater'; r3='lower'; r4='smaller'}
+	else if (currentex == '19 1 7') {show = 'Synonym for: taste <br><button class="ogspace3">?</button>.'; n1='4'; r1 = 'flavor'; r2='unflavored'; r3='unsavory'; r4='smell'}
+	else if (currentex == '19 1 8') {show = 'Synonym for: summary <br><button class="ogspace3">?</button>.'; n1='4'; r1 = 'extension'; r2='resume'; r3='reading'; r4='synopsis'}
+	else if (currentex == '19 1 9') {show = 'Synonym for: suggestion <br><button class="ogspace3">?</button>.'; n1='4'; r1 = 'plead'; r2='warning'; r3='order'; r4='opinion'}
 
 
 
@@ -426,6 +545,14 @@ function Calculate(){
 	else if (currentype=='9 4') {ins1='Select the correct subordinating conjunction.'}
 	else if (currentype=='10 1') {ins1='Fill in the blanks with the correct word according to the sentence: “some” or “any”.'}
 	
+	else if (currentype=='11 1') {ins1='Identify the following words; select between: person, place, animal, thing, or idea.'}
+	else if (currentype=='11 2') {ins1='Select the correct reflexive pronoun according to the sentence.'}
+	else if (currentype=='11 3') {ins1='Select the correct demonstrative pronoun according to the sentence.'}
+	else if (currentype=='12 1') {ins1='Write the following sentences in their correct order.'}
+	else if (currentype=='12 2') {ins1='The following words are misspelled, write them correctly.'}
+	else if (currentype=='16 1') {ins1='Choose the modal auxiliary that fits best in the following sentences.'}
+	else if (currentype=='16 2') {ins1='Unscramble the following words. For example: gualagen = language'}
+	else if (currentype=='19 1') {ins1='Select the correct synonym for the following words.'}
 
 
 
@@ -508,6 +635,38 @@ function Calculate(){
 
 	unit10answers2=["bruh","some","any","any","some","some","some","any","some","any","any"];
 
+	unit11answers1=["bruh","novelist - Person.", "Richard - Person.", "freedom - Idea.", "Boston - Place", "whale - Animal", "Lincoln Park - Place", "Santa Claus - Person", "poem - Thing", "faith - Idea", "Daniel - Person",
+							"He came walking home by himself.", "They were singing by themselves", "I, myself read the whole book.", "She went to the movies by herself.", "We, ourselves raised enough money for Jon's operation.",
+							"You guys are going to do it by yourselves.", "It is not going to get done by itself.", "She, herself presented the project.", "We did it for ourselves.", "I am going to keep it for myself.",
+							"This cat is my sister's pet", "These books are mine.", "This is Peter's wallet.", "This car is crashed.", "These dresses are on sale.",
+							"That is the house that I live in.", "Those are my shoes.", "Those across the street are my neighbors.", "That is my baseball bat.", "Those are my books."];
+
+	unit11answers2=["bruh", "Person", "Person", "Idea", "Place", "Animal", "Place", "Person", "Thing", "Idea", "Person", "himself", "themselves", "myself", "herself", "ourselves", "yourselves", "itself", "herself", "ourselves", "myself",
+					"This", "These", "This", "This", "These", "That", "Those", "Those", "That", "Those"];
+
+	unit12answers1=["bruh", "He is playing in the park.", "They are attending the meeting.","She is smoking outside.","Tom is not accepting the offer.", "Are they arriving at noon?","They are acting in the play.","She is not coming until later.","Is it raining?","The eggs are not boiling.","Alice is not assisting the doctor.",
+					"biusy - busy","kandle - candle","cheise - cheese","centurie - century","kandie - candy","klass - class","caike - cake","shapter - chapter","churh - church","cirkle - circle"];			
+	
+	unit12answers2=["bruh", "He is playing in the park", "They are attending the meeting","She is smoking outside","Tom is not accepting the offer", "Are they arriving at noon?","They are acting in the play","She is not coming until later","Is it raining?","The eggs are not boiling","Alice is not assisting the doctor",
+					"busy","candle","cheese","century","candy","class","cake","chapter","church","circle"];		
+
+	unit16answers1=["bruh", "Susan must change her eating habits or sooner or later she will get sick.","Tom can play baseball like a professional.","I might win if I am lucky.","It could snow tomorrow according to the weather channel.","You ought to stay in bed; you have a terrible fever.",
+					"I should stay in shape and do my daily exercises.","May I help you?","We have to arrive on time or we´ll lose the flight.","May I borrow you car tonight? I have a date with Melissa.","Would you please open the door for me? My hands are dirty.",
+					"droer - order","typorutinop - opportunity","lmaechnica - mechanical","kobo - book","tionobserva - observation","ecdialm - medical","ormemy - memory","hoodneighrob - neighborhood","egnshil - english","scasl - class"];
+
+	unit16answers2=["bruh", "must","can","might","could","ought to","should","may","have to","may","would",
+					"order","opportunity","mechanical","book","observation","medical","memory","neighborhood","english","class"];				
+
+
+	
+	unit19answers1=["bruh","step - footstep","storm - tornado","strange - bizarre","strenght - force","stripe - line","stubborn - obstinate","superior - greater","taste - flavor","summary - synopsis","suggestion - opinion"];
+	
+	unit19answers2=["bruh","footstep","tornado","bizarre","force","line","obstinate","greater","flavor","synopsis","opinion"];
+	
+			
+
+
+
 	console.log('current'+currentex);
 	console.log(show);
 
@@ -560,7 +719,7 @@ function Calculate(){
 									'<div class="ogbox5"><button onclick="pressButton4();" id="anbutton2"class="fluid ui button">'+r4+'</button></div>'+
 								'</div>';
 							}
-		if (ExUnits==7) {
+		else if (ExUnits==7) {
 			getExcercise.innerHTML = '<h4 id="ogtext">'+NoOrden+'. '+show+'</h4>'+
 									'<div class="ogcentered2">'+
 									'<div class="ogbox4"><button onclick="pressButton1();" id="abutton" class="fluid ui button">'+r1+'</button></div>'+
@@ -570,6 +729,16 @@ function Calculate(){
 									'<div class="ogbox5"><button onclick="pressButton4();" id="anbutton2"class="fluid ui button">'+r4+'</button></div>'+
 								'</div>';
 		}
+		else if (ExUnits==11) {	getExcercise.innerHTML = '<div class="ogcentered"><h4 class="ogtitle2">'+ins2+'</h4></div>'+
+									'<h4 id="ogtext">'+NoOrden+'. '+show+'</h4>'+
+									'<div class="ogcentered2">'+
+									'<div class="ogbox4"><button onclick="pressButton1();" id="abutton" class="fluid ui button">'+r1+'</button></div>'+
+									'<div class="ogbox4"><button onclick="pressButton2();" id="anbutton"class="fluid ui button">'+r2+'</button></div>'+
+									'<br>'+
+									'<div class="ogbox5"><button onclick="pressButton3();" id="abutton2"class="fluid ui button">'+r3+'</button></div>'+
+									'<div class="ogbox5"><button onclick="pressButton4();" id="anbutton2"class="fluid ui button">'+r4+'</button></div>'+
+								'</div>';
+							}
 	
 	}
 	else if (ExGenero=="subr") {
@@ -705,6 +874,13 @@ function Calculate(){
 	}
 	}
 
+		else if (ExGenero=="writer") {
+			
+			getExcercise.innerHTML = '<h4 id="ogtext">'+NoOrden+'. '+show+'</h4>';
+								
+
+		}
+
 
 
 		ShowResults();
@@ -723,6 +899,10 @@ function Calculate(){
 		else if (ExUnits == 8){currentlista = unit8answers1; currentlista2 = unit8answers2;}
 		else if (ExUnits == 9){currentlista = unit9answers1; currentlista2 = unit9answers2;}
 		else if (ExUnits == 10){currentlista = unit10answers1; currentlista2 = unit10answers2;}
+		else if (ExUnits == 11){currentlista = unit11answers1; currentlista2 = unit11answers2;}
+		else if (ExUnits == 12){currentlista = unit12answers1; currentlista2 = unit12answers2;}
+		else if (ExUnits == 16){currentlista = unit16answers1; currentlista2 = unit16answers2;}
+		else if (ExUnits == 19){currentlista = unit19answers1; currentlista2 = unit19answers2;}
 	}
 function Generate(){
 					getExcercise.innerHTML = '<h4 id="ogtext">'+NoOrden+'. '+show+'.</h4>'+
@@ -736,10 +916,30 @@ function Generate(){
 
 ExcerciseAnswer4 = "the";
 
+let inputanswer = document.querySelector(".oginput");
+let writerans;
+
+
+function bruh1() {
+	writerans = inputanswer.value;
+	console.log(writerans);
+}
+
 function Calificar(){
 
+checkUnit();
+CheckGenero();
 
-	checkUnit();
+if (ExGenero == "writer") {
+	bruh1();
+	inputanswer.value = "";
+}
+else{
+	console.log("asd");
+}
+
+
+
 	if (ExGenero == "2r") {
 		if (ExcerciseNo == 0) {
 			arrayRespuestas.push(ExcerciseAnswer3);
@@ -1871,6 +2071,301 @@ function Calificar(){
 
 	}
 
+	//Writer
+	if (ExGenero=="writer") {
+		if (ExcerciseNo == 0) {
+			arrayRespuestas.push(writerans);
+			if (ExType==1) {answer1 = currentlista[1];}
+			else if (ExType==2) {answer1 = currentlista[11];}
+			listaderespuestas.push(answer1);
+			if (ExType==1) {
+					if (writerans==currentlista2[1]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+				}
+			}
+			else if (ExType==2) {
+				if (writerans==currentlista2[11]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+				}
+			}
+		}
+
+		if (ExcerciseNo == 1) {
+			arrayRespuestas.push(writerans);
+			if (ExType==1) {answer2 = currentlista[2];}
+			else if (ExType==2) {answer2 = currentlista[12];}
+			listaderespuestas.push(answer2);
+			if (ExType==1) {
+					if (writerans==currentlista2[2]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+				}
+			}
+			else if (ExType==2) {
+				if (writerans==currentlista2[12]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+					}
+				}
+			}
+
+			if (ExcerciseNo == 2) {
+			arrayRespuestas.push(writerans);
+			if (ExType==1) {answer3 = currentlista[3];}
+			else if (ExType==2) {answer3 = currentlista[13];}
+			listaderespuestas.push(answer3);
+			if (ExType==1) {
+					if (writerans==currentlista2[3]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+				}
+			}
+			else if (ExType==2) {
+				if (writerans==currentlista2[13]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+					}
+				}
+			}
+
+			if (ExcerciseNo == 3) {
+			arrayRespuestas.push(writerans);
+			if (ExType==1) {answer4 = currentlista[4];}
+			else if (ExType==2) {answer4 = currentlista[14];}
+			listaderespuestas.push(answer4);
+			if (ExType==1) {
+					if (writerans==currentlista2[4]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+				}
+			}
+			else if (ExType==2) {
+				if (writerans==currentlista2[14]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+					}
+				}
+			}
+
+			if (ExcerciseNo == 4) {
+			arrayRespuestas.push(writerans);
+			if (ExType==1) {answer5 = currentlista[5];}
+			else if (ExType==2) {answer5 = currentlista[15];}
+			listaderespuestas.push(answer5);
+			if (ExType==1) {
+					if (writerans==currentlista2[5]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+				}
+			}
+			else if (ExType==2) {
+				if (writerans==currentlista2[15]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+					}
+				}
+			}
+
+			if (ExcerciseNo == 5) {
+			arrayRespuestas.push(writerans);
+			if (ExType==1) {answer6 = currentlista[6];}
+			else if (ExType==2) {answer6 = currentlista[16];}
+			listaderespuestas.push(answer6);
+			if (ExType==1) {
+					if (writerans==currentlista2[6]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+				}
+			}
+			else if (ExType==2) {
+				if (writerans==currentlista2[16]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+					}
+				}
+			}
+
+			if (ExcerciseNo == 6) {
+			arrayRespuestas.push(writerans);
+			if (ExType==1) {answer7 = currentlista[7];}
+			else if (ExType==2) {answer7 = currentlista[17];}
+			listaderespuestas.push(answer7);
+			if (ExType==1) {
+					if (writerans==currentlista2[7]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+				}
+			}
+			else if (ExType==2) {
+				if (writerans==currentlista2[17]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+					}
+				}
+			}
+
+			if (ExcerciseNo == 7) {
+			arrayRespuestas.push(writerans);
+			if (ExType==1) {answer8 = currentlista[8];}
+			else if (ExType==2) {answer8 = currentlista[18];}
+			listaderespuestas.push(answer8);
+			if (ExType==1) {
+					if (writerans==currentlista2[8]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+				}
+			}
+			else if (ExType==2) {
+				if (writerans==currentlista2[18]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+					}
+				}
+			}
+
+			if (ExcerciseNo == 8) {
+			arrayRespuestas.push(writerans);
+			if (ExType==1) {answer9 = currentlista[9];}
+			else if (ExType==2) {answer9 = currentlista[19];}
+			listaderespuestas.push(answer9);
+			if (ExType==1) {
+					if (writerans==currentlista2[9]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+				}
+			}
+			else if (ExType==2) {
+				if (writerans==currentlista2[19]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+					}
+				}
+			}
+
+			if (ExcerciseNo == 9) {
+			arrayRespuestas.push(writerans);
+			if (ExType==1) {answer10 = currentlista[10];}
+			else if (ExType==2) {answer10 = currentlista[20];}
+			listaderespuestas.push(answer10);
+			if (ExType==1) {
+					if (writerans==currentlista2[10]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+				}
+			}
+			else if (ExType==2) {
+				if (writerans==currentlista2[20]) {
+					correct1 = true;
+					listadecorrects.push(correct1);
+					numerodecorrectas = numerodecorrectas+1;
+				}
+				else{
+					correct1 = false;
+					listadecorrects.push(correct1);
+					}
+				}
+			}
+
+
+	}
+
 
 	if (ExGenero=="subr") {
 		if (ExcerciseNo == 0) {
@@ -2298,6 +2793,7 @@ function Calificar(){
 
 	}
 
+
 //Multiples
 if (ExGenero=="multr") {
 	if (ExcerciseNo==0) {
@@ -2464,6 +2960,7 @@ console.log("antes"+ExUnits);
 
 
 
+
 let frase1 = "You did great!";
 let frase2 = "Not bad!"
 let frase3 = "Keep trying!";
@@ -2487,15 +2984,15 @@ function checkFrase(){
 
 	//checar banner
 
-	if (ExUnits==1) {banner = "banner1";}
-	else if (ExUnits==2) {banner = "banner2";}
+	if (ExUnits==1 || ExUnits==11) {banner = "banner1";}
+	else if (ExUnits==2 || ExUnits==12) {banner = "banner2";}
 	else if (ExUnits==3) {banner = "banner3";}
 	else if (ExUnits==4) {banner = "banner4";}
 	else if (ExUnits==5) {banner = "banner5";}
-	else if (ExUnits==6) {banner = "banner6";}
+	else if (ExUnits==6 || ExUnits==16) {banner = "banner6";}
 	else if (ExUnits==7) {banner = "banner7";}
 	else if (ExUnits==8) {banner = "banner8";}
-	else if (ExUnits==9) {banner = "banner9";}
+	else if (ExUnits==9 || ExUnits==19) {banner = "banner9";}
 	else if (ExUnits==10) {banner = "banner10";}
 
 
@@ -2506,10 +3003,45 @@ function checkEnd(){
 
 }
 
+function hideInput(){
+
+	if (ExUnits == 12 || ExUnits == 16 && ExType == 2) {
+		if (ExcerciseNo == 0 || ExcerciseNo == 1 || ExcerciseNo == 2 || ExcerciseNo == 3 || ExcerciseNo == 4 || ExcerciseNo == 5 || ExcerciseNo == 6 || ExcerciseNo == 7 || ExcerciseNo == 8 || ExcerciseNo == 9) {
+			document.getElementById("oghide").style.display = "block";
+		}
+		else{
+			document.getElementById("oghide").style.display = "none";
+		}
+	}
+	else{
+		if (ExUnits == 12 || ExUnits == 16) {
+			document.getElementById("oghide").style.display = "none";
+		}
+		
+	}
+
+	// if (ExUnits == 12 || ExUnits == 16) {
+	// 	if (ExcerciseNo == 10) {
+	// 	document.getElementById("oghide").style.display = "none";
+	// 	}
+	// 	else{
+	// 		document.getElementById("oghide").style.display = "block";
+	// 	}
+	// }
+
+	// if (ExUnits == 16 || ExType == 1) {
+	// 	document.getElementById("oghide").style.display = "none";
+	// }
+	// else{
+	// 	document.getElementById("oghide").style.display = "block";
+	// }
+	
+}
 
 
 function ShowResults(){
 //
+hideInput();
 checkFrase();
 	if (ExcerciseNo == 10) {
 		console.log(listaderespuestas);
@@ -2545,16 +3077,25 @@ checkFrase();
 														'<h3>'+truefrase+'</h3>'+
 													'</div>'+
 													'</div>';
-
+					//removeInput.innerHTML = '';
 
 					removeButton.innerHTML = '<br><br><br><br><br><br>';
 			
 
 			
-		} 
-		else {
+		}
 
+		else {
+			if (ExUnits == 12 || ExUnits == 16) {
 					getBotEnd.innerHTML =	'';
+					removeButton.innerHTML = '<div class="ogbox3"><button id="ogdiss2" onclick="Calificar();" class="fluid ui blue button">Next</button></div>';
+			}
+
+			else {
+				getBotEnd.innerHTML =	'';
 					removeButton.innerHTML = '<div class="ogbox3"><button id="ogdiss2" onclick="Calificar();" class="fluid ui blue disabled button">Next</button></div>';
+			}
+
+					
 					}
 }

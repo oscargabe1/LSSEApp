@@ -18,7 +18,10 @@ let lista2=[4,5,6];
 let X = 1;
 
 
-
+function checkWriter(){
+	let getNextB = document.querySelector("#ogdiss2");
+	getNextB.className="fluid ui blue button";
+}
 
 function asd(){
 	
@@ -361,7 +364,7 @@ function checkDouble(){
 		}
 		console.log(doubleAnswer);
 	}
-	else if (ExUnits==9 && ExType==1) {
+	else if (ExUnits==9 && ExType==1 || ExUnits==19 && ExType==1) {
 		doubleAnswer=false;
 	}
 	
@@ -573,6 +576,7 @@ currentype = (ExUnits+' '+ExType);
 let getExcercise = document.querySelector(".ogchange");
 let getBotEnd = document.querySelector(".ogbot");
 let removeButton = document.querySelector(".ogcentered3");
+let removeInput = document.querySelector(".ogcentered2");
 
 Calculate();
 

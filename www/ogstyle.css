@@ -922,6 +922,52 @@ height: 9px;
 	font-weight: 900;
 	color:#9f4878;
 }
+/*Colores Unit1*/
+.ogtriplea1
+{
+	float: left;
+	padding-right: 5px;
+	font-weight: bold;
+	color:#00a991;
+}
+.ogtripleb1
+{
+	float: left;
+	width: 33.3%;
+	font-weight: bold;
+	color:#00a991;
+}
+.ogtriplec1
+{
+	float: left;
+	padding-right: 5px;
+	font-weight: 900;
+	color:#00a991;
+}
+
+/*Colores Unit2*/
+.ogtriplea2
+{
+	float: left;
+	padding-right: 5px;
+	font-weight: bold;
+	color:#96c11f;
+}
+.ogtripleb2
+{
+	float: left;
+	width: 33.3%;
+	font-weight: bold;
+	color:#96c11f;
+}
+.ogtriplec2
+{
+	float: left;
+	padding-right: 5px;
+	font-weight: 900;
+	color:#96c11f;
+}
+
 /*Colores Unit7*/
 .ogtriplea7
 {
@@ -1036,14 +1082,58 @@ height: 9px;
 .ogcoloredword{
 	color:#5c5ba5;
 }
+.ogcoloredword1{
+	color:#00a991;
+}
+.ogcoloredword2{
+	color:#96c11f;
+}
+.ogcoloredword3{
+	color:#ffb720;
+}
+.ogcoloredword4{
+	color:#ef7c48;
+}
+.ogcoloredword5{
+	color:#ec5f78;
+}
+.ogcoloredword6{
+	color:#9f4878;
+}
+.ogcoloredword7{
+	color:#725191;
+}
+.ogcoloredword8{
+	color:#5c5ba5;
+}
+.ogcoloredword9{
+	color:#00a5c2;
+}
+.ogcoloredword10{
+	color:#0075be;
+}
+
+
+
+
 .ogformcontainer
 {
 	width: 85%;
 	padding-left: 15%;
 
 }
-.ogwhite
-{
-	
+.ogbot{
+	z-index: 1000;
 }
+.oghide
+{
+	z-index: -1000;
+}
+
+
+
+
+
+
+
 

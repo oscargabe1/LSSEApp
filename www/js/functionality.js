@@ -1,5 +1,6 @@
 let Units;
 
+
 function Unit1(){
 	Units = 1;
 }
@@ -29,6 +30,37 @@ function Unit9(){
 }
 function Unit10(){
 	Units = 10;
+}
+
+function Unit11(){
+	Units = 11;
+}
+function Unit12(){
+	Units = 12;
+}
+function Unit13(){
+	Units = 13;
+}
+function Unit14(){
+	Units = 14;
+}
+function Unit15(){
+	Units = 15;
+}
+function Unit16(){
+	Units = 16;
+}
+function Unit17(){
+	Units = 17;
+}
+function Unit18(){
+	Units = 18;
+}
+function Unit19(){
+	Units = 19;
+}
+function Unit20(){
+	Units = 20;
 }
 
 var isPlaying = false;
@@ -64,6 +96,24 @@ function playAudio(audionum){
 	else if (Units==10) {
 		snd = new Audio("audios/unit10/audio"+audionum+".mp3");
 	}
+	else if (Units==11 || Units==13 || Units==15 || Units==17 || Units==19) {
+		snd = new Audio("audios/passages/audio"+audionum+".mp3");
+	}
+	else if (Units==12) {
+		snd = new Audio("audios/unit12/audio"+audionum+".mp3");
+	}
+	else if (Units==14) {
+		snd = new Audio("audios/unit14/audio"+audionum+".mp3");
+	}
+	else if (Units==16) {
+		snd = new Audio("audios/unit16/audio"+audionum+".mp3");
+	}
+	else if (Units==18) {
+		snd = new Audio("audios/unit18/audio"+audionum+".mp3");
+	}
+	else if (Units==20) {
+		snd = new Audio("audios/unit20/audio"+audionum+".mp3");
+	}
 
 	
 	
@@ -83,7 +133,27 @@ function playAudio(audionum){
 }
 
 }
-
+var HttpRequest=function (type,url,jsonParams,fun) {
+	try{		
+		let request= new XMLHttpRequest();
+		request.open(type,url+"?params="+JSON.stringify(jsonParams),true)
+		request.setRequestHeader("Content-Type", "application/json")
+		request.onreadystatechange=function () {
+			if(request.readyState==1){				
+				console.log("Conexion establecida...")
+			}else if (request.readyState == 4 && request.status == 200) {				
+				fun(request.responseText)
+			}else if(request.status==403){//Forbidden				
+				swal('','Conexion prohibida '+request.responseText,'error')
+			}else if(request.status==404){//not found				
+				swal('','Url no encontrada '+url+' Server: '+request.responseText,'error')
+			}
+		}
+		request.send()
+	}catch (ex){
+		swal('',ex.message,'error')
+	}
+}
 
 
 // var vocabularyOrExpressions = true;

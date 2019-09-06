@@ -15,30 +15,15 @@
 				<img class="ogimgin" src="imgs/logoinicio.png">
 			</div>
 
-			<div class="ogformcontainer">
-				<form class="ui form">
-				  <div class="field">
-				    <label class="ogwhite">Usuario</label>
-				    <input class="oginput" type="text" name="first-name" placeholder="Usuario">
-				  </div>
-				  <div class="field">
-				    <label class="ogwhite">Contraseña</label>
-				    <input type="text" name="last-name" placeholder="Contraseña">
-				  </div>
-				</form>	
-			</div>
-			<br><br>
-
-
 			<div class="ogbuttoncontainer">
-				<button onclick="bruh();" class="fluid ui button">Start</button>
+				<button onclick="window.location.href='main.html'" class="fluid ui button">Start</button>
 			</div>
 		
 	</div>
 
 	</div>
 
-			
+
 
 
 
@@ -47,15 +32,9 @@
 
 	
 	<script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
-	<!-- <script type="text/javascript" src="js/toolsCookie.js"></script> -->
+	<script type="text/javascript" src="js/toolsCookie.js"></script>
 	<script type="text/javascript">
-
-	let getInput = document.querySelector(".oginput");
-
-	function bruh(){
-		console.log(getInput.value);
-		// $toolsCookie.createCookie("oscar",3,5)
-	}
+		$toolsCookie.createCookie("oscar",3,5)
 	</script>
 </body>
 </html>

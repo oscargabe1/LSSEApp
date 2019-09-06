@@ -6,26 +6,24 @@
         <meta http-equiv=“Content-Security-Policy” content= “default-src script-src ‘self’ ‘unsafe-inline’ ‘unsafe-eval’ ; style-src ‘self’ ‘unsafe-inline’ ; img-src data: ‘unsafe-inline’”>
         <title>LSSE</title>
 	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-	<link rel="stylesheet" type="text/css" href="js/plugins/sweetalert2/sweetalert2.min.css">
 	<link rel="stylesheet" type="text/css" href="ogstyle.css">
 </head>
 <body>
 	<div class="ogcontainer3">
 		
 			<div class="ogimginicio">
-				<img style="width: 70%" class="ogimgin" src="imgs/logoinicio.png">
+				<img class="ogimgin" src="imgs/logoinicio.png">
 			</div>
 
 			<div class="ogformcontainer">
-				<form class="ui form" id="frmLogin" name="frmLogin">
+				<form class="ui form">
 				  <div class="field">
 				    <label class="ogwhite">Usuario</label>
-				    <input class="oginput" type="text" name="Usuario" id="Usuario" placeholder="Usuario">
+				    <input class="oginput" type="text" name="first-name" placeholder="Usuario">
 				  </div>
 				  <div class="field">
 				    <label class="ogwhite">Contraseña</label>
-				    <input type="text" name="Password" id="Password" placeholder="Contraseña">
-					<input type="hidden" name="action" value="login" id="action">
+				    <input type="text" name="last-name" placeholder="Contraseña">
 				  </div>
 				</form>	
 			</div>
@@ -40,70 +38,23 @@
 
 	</div>
 
+			
 
 
 
 
 
 
-
-
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="js/plugins/sweetalert2/sweetalert2.min.js"></script>
+	
 	<script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
 	<!-- <script type="text/javascript" src="js/toolsCookie.js"></script> -->
 	<script type="text/javascript">
-		var	PutHttpFrm=function (url,nameForm) {
-			var result;
-			var formData= new FormData(document.getElementById(nameForm));
-			result=$.ajax({
-				url:url,
-				type:"POST",
-				dataType:"HTML",
-				data:formData,
-				cache:false,
-				contentType:false,
-				processData:false,
-				async:true,
-				beforeSend: function () {
-					$('#modalLoader').show();
-				},
-				success: function (msg) {
-					$('#modalLoader').hide();
-					document.getElementById(nameForm).reset();
-				}
-			});
-			return result;
-		}
+
+	let getInput = document.querySelector(".oginput");
+
 	function bruh(){
-		let usuario = document.getElementById("Usuario")
-		let password = document.getElementById("Password")
-		if(usuario.value.toString().length==0 && password.value.toString().length==0){
-			swal('','Proporcione un usuario y una contraseña','warning')
-			return false
-		}
-		if(usuario.value.toString().length==0){
-			swal('','Proporcione un usuario','warning')
-			return false
-		}
-		if(password.value.toString().length==0){
-			swal('','Proporcione una contraseña valida','warning')
-			return false
-		}
-		let url='https://chinolin.com/Ingles/Controllers/Api/LoginController.php';
-		//let url='../../../ingles/Controllers/Api/LoginController.php';
-		PutHttpFrm(url,'frmLogin').done(function (request) {
-			try{
-				var json=JSON.parse(request);
-				if(json.Usuario==404){
-					swal('','Usuario o Contraseña incorrectos','error')
-				}else if(json.Usuario==202){
-					window.location='main.html?IdAlumno='+json.IdAlumno+'&IdSucursal='+json.IdSucursal;
-				}
-			}catch(e){
-				swal('Ocurrio un error',e.message,'error')
-			}
-		})
+		console.log(getInput.value);
+		// $toolsCookie.createCookie("oscar",3,5)
 	}
 	</script>
 </body>

@@ -133,27 +133,7 @@ function playAudio(audionum){
 }
 
 }
-var HttpRequest=function (type,url,jsonParams,fun) {
-	try{		
-		let request= new XMLHttpRequest();
-		request.open(type,url+"?params="+JSON.stringify(jsonParams),true)
-		request.setRequestHeader("Content-Type", "application/json")
-		request.onreadystatechange=function () {
-			if(request.readyState==1){				
-				console.log("Conexion establecida...")
-			}else if (request.readyState == 4 && request.status == 200) {				
-				fun(request.responseText)
-			}else if(request.status==403){//Forbidden				
-				swal('','Conexion prohibida '+request.responseText,'error')
-			}else if(request.status==404){//not found				
-				swal('','Url no encontrada '+url+' Server: '+request.responseText,'error')
-			}
-		}
-		request.send()
-	}catch (ex){
-		swal('',ex.message,'error')
-	}
-}
+
 
 
 // var vocabularyOrExpressions = true;

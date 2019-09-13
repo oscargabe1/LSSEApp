@@ -19,13 +19,19 @@
 			<div class="ogformcontainer">
 				<form class="ui form" id="frmLogin" name="frmLogin">
 				  <div class="field">
-				    <label class="ogwhite">Usuario</label>
-				    <input class="oginput" type="text" name="Usuario" id="Usuario" placeholder="Usuario">
+				    <h4 class="ogwhite">Usuario</h4>
+				    <div class="ogusuarioinput">
+				    	
+				    </div>
+				    
 				  </div>
 				  <div class="field">
-				    <label class="ogwhite">Contraseña</label>
-				    <input type="text" name="Password" id="Password" placeholder="Contraseña">
-					<input type="hidden" name="action" value="login" id="action">
+				    <h4 class="ogwhite">Contraseña</h4>
+				    <div class="ogpasswordinput">
+				    	
+				    </div>
+				    
+					
 				  </div>
 				</form>	
 			</div>
@@ -37,6 +43,8 @@
 			</div>
 		
 	</div>
+
+	
 
 	</div>
 
@@ -53,6 +61,8 @@
 	<script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
 	<!-- <script type="text/javascript" src="js/toolsCookie.js"></script> -->
 	<script type="text/javascript">
+		let usuarioPlaceHolder = "";
+		let passPlaceHolder = "";
 		var	PutHttpFrm=function (url,nameForm) {
 			var result;
 			var formData= new FormData(document.getElementById(nameForm));
@@ -85,10 +95,12 @@
 		if(usuario.value.toString().length==0){
 			swal('','Proporcione un usuario','warning')
 			return false
+			localStorage.clear();
 		}
 		if(password.value.toString().length==0){
 			swal('','Proporcione una contraseña valida','warning')
 			return false
+			localStorage.clear();
 		}
 		let url='https://chinolin.com/Ingles/Controllers/Api/LoginController.php';
 		//let url='../../../ingles/Controllers/Api/LoginController.php';
@@ -97,6 +109,7 @@
 				var json=JSON.parse(request);
 				if(json.Usuario==404){
 					swal('','Usuario o Contraseña incorrectos','error')
+					localStorage.clear();
 				}else if(json.Usuario==202){
 					window.location='main.html?IdAlumno='+json.IdAlumno+'&IdSucursal='+json.IdSucursal;
 				}
@@ -104,7 +117,41 @@
 				swal('Ocurrio un error',e.message,'error')
 			}
 		})
+		guardarLocalStorage();
+
 	}
+
+	obtenerLocalStorage();
+	function guardarLocalStorage(){
+		let userPH = document.querySelector(".oginput").value;
+		let passPH = document.querySelector("#Password").value;
+		localStorage.setItem("userPH", userPH);
+		localStorage.setItem("passPH", passPH);
+	}
+	function obtenerLocalStorage(){
+
+		if (localStorage.getItem("userPH")) {
+			usuarioPlaceHolder = localStorage.getItem("userPH");
+		} else{
+			usuarioPlaceHolder = "";
+		}
+
+		if (localStorage.getItem("passPH")) {
+			passPlaceHolder = localStorage.getItem("passPH");
+		} else{
+			passPlaceHolder = "";
+		}
+
+		
+	}
+
+	let getUsuario = document.querySelector(".ogusuarioinput");
+	getUsuario.innerHTML = '<input class="oginput" type="text" name="Usuario" id="Usuario" placeholder="Usuario" value="'+usuarioPlaceHolder+'">';
+
+	let getPassword = document.querySelector(".ogpasswordinput");
+	getPassword.innerHTML = '<input type="password" name="Password" id="Password" placeholder="Contraseña" value="'+		passPlaceHolder+'">'+
+							'<input type="hidden" name="action" value="login" id="action">';
+									
 	</script>
 </body>
 </html>

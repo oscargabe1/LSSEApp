@@ -91,25 +91,26 @@
 		let password = document.getElementById("Password")
 		guardarLocalStorage();
 		checkPH();
+		poner();
 		
 		if(usuario.value.toString().length==0 && password.value.toString().length==0){
 			swal('','Proporcione un usuario y una contraseña','warning')
 			return false
-			poner();
+			//poner();
 			//checkPH();
 			//obtenerLocalStorage();
 		}
 		if(usuario.value.toString().length==0){
 			swal('','Proporcione un usuario','warning')
 			return false
-			poner();
+			//poner();
 			//checkPH();
 			//obtenerLocalStorage();
 		}
 		if(password.value.toString().length==0){
 			swal('','Proporcione una contraseña valida','warning')
 			return false
-			poner();
+			//poner();
 			//checkPH();
 			//obtenerLocalStorage();
 		}
@@ -121,7 +122,7 @@
 				if(json.Usuario==404){
 					
 					swal('','Usuario o Contraseña incorrectos','error')
-					poner();
+					//poner();
 					//checkPH();
 					//obtenerLocalStorage();
 				}else if(json.Usuario==202){

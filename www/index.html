@@ -63,6 +63,7 @@
 	<script type="text/javascript">
 		let usuarioPlaceHolder = "";
 		let passPlaceHolder = "";
+		
 		var	PutHttpFrm=function (url,nameForm) {
 			var result;
 			var formData= new FormData(document.getElementById(nameForm));
@@ -88,19 +89,29 @@
 	function bruh(){
 		let usuario = document.getElementById("Usuario")
 		let password = document.getElementById("Password")
+		guardarLocalStorage();
+		checkPH();
+		
 		if(usuario.value.toString().length==0 && password.value.toString().length==0){
 			swal('','Proporcione un usuario y una contraseña','warning')
 			return false
+			poner();
+			//checkPH();
+			//obtenerLocalStorage();
 		}
 		if(usuario.value.toString().length==0){
 			swal('','Proporcione un usuario','warning')
 			return false
-			localStorage.clear();
+			poner();
+			//checkPH();
+			//obtenerLocalStorage();
 		}
 		if(password.value.toString().length==0){
 			swal('','Proporcione una contraseña valida','warning')
 			return false
-			localStorage.clear();
+			poner();
+			//checkPH();
+			//obtenerLocalStorage();
 		}
 		let url='https://chinolin.com/Ingles/Controllers/Api/LoginController.php';
 		//let url='../../../ingles/Controllers/Api/LoginController.php';
@@ -108,20 +119,29 @@
 			try{
 				var json=JSON.parse(request);
 				if(json.Usuario==404){
+					
 					swal('','Usuario o Contraseña incorrectos','error')
-					localStorage.clear();
+					poner();
+					//checkPH();
+					//obtenerLocalStorage();
 				}else if(json.Usuario==202){
 					window.location='main.html?IdAlumno='+json.IdAlumno+'&IdSucursal='+json.IdSucursal;
+					//checkPH();
+
+
+
 				}
 			}catch(e){
 				swal('Ocurrio un error',e.message,'error')
+				localStorage.clear();
 			}
 		})
-		guardarLocalStorage();
+		
+     
 
 	}
-
-	obtenerLocalStorage();
+obtenerLocalStorage();
+	
 	function guardarLocalStorage(){
 		let userPH = document.querySelector(".oginput").value;
 		let passPH = document.querySelector("#Password").value;
@@ -145,12 +165,24 @@
 		
 	}
 
-	let getUsuario = document.querySelector(".ogusuarioinput");
+	function checkPH(){
+		usuarioPlaceHolder = localStorage.getItem("userPH");
+		console.log("actual user " + usuarioPlaceHolder);
+		passPlaceHolder = localStorage.getItem("passPH");
+		console.log("actual pass " + passPlaceHolder);
+
+	}
+
+	function poner(){
+		let getUsuario = document.querySelector(".ogusuarioinput");
 	getUsuario.innerHTML = '<input class="oginput" type="text" name="Usuario" id="Usuario" placeholder="Usuario" value="'+usuarioPlaceHolder+'">';
 
 	let getPassword = document.querySelector(".ogpasswordinput");
 	getPassword.innerHTML = '<input type="password" name="Password" id="Password" placeholder="Contraseña" value="'+		passPlaceHolder+'">'+
 							'<input type="hidden" name="action" value="login" id="action">';
+	}
+
+poner();
 									
 	</script>
 </body>

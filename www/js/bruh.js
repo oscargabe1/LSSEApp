@@ -3065,17 +3065,20 @@ checkFrase();
 									'<br>'+
 									'<br>';
 			
-							getBotEnd.innerHTML =	'<div onclick="newType();">'+
-													'<div class="ogendcont">'+
-														'<img class="ogendimg" src="imgs2/actividades/'+banner+'.png">'+
-													'</div>'+
-													'<div class="ogendcont2">'+
-														'<img class="ogendimg" src="imgs2/actividades/'+nina+'.png">'+
-													'</div>'+
-													'<div class="ogendtext">'+
-														'<h2>'+numerodecorrectas+'/10</h2>'+
-														'<h3>'+truefrase+'</h3>'+
-													'</div>'+
+							getBotEnd.innerHTML =	'<div class="nogbannercont">'+
+															'<img class="nogbanner" src="imgs2/actividades/'+banner+'.png">'+
+															'<div class="nogninacont">'+
+																'<img class="nognina" src="imgs2/actividades/nog'+nina+'.png">'+
+															'</div>'+
+															'<div class="nogendtext">'+
+																'<div class="nogtexts">'+
+																	'<h2>'+numerodecorrectas+'/10</h2>'+
+																	'<h3>'+truefrase+'</h3>'+
+																'</div>'+
+															'</div>'+
+															'<div onclick="newType();" class="nognextarrowcont">'+
+																'<img class="nognextarrow" src="imgs2/arrow2.png">'+
+															'</div>'+
 													'</div>';
 					//removeInput.innerHTML = '';
 

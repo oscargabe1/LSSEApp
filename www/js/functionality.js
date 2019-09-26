@@ -64,74 +64,104 @@ function Unit20(){
 }
 
 var isPlaying = false;
-function playAudio(audionum){
-	var snd;
+var snd;
+
+function findAudio(){
 	if (Units==1) {
-		snd = new Audio("audios/unit1/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit1/audio100.mp3");
 	}
 	else if (Units==2) {
-		snd = new Audio("audios/unit2/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit2/audio100.mp3");
 	}
 	else if (Units==3) {
-		snd = new Audio("audios/unit3/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit3/audio102.mp3");
 	}
 	else if (Units==4) {
-		snd = new Audio("audios/unit4/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit4/audio103.mp3");
 	}
 	else if (Units==5) {
-		snd = new Audio("audios/unit5/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit5/audio100.mp3");
 	}
 	else if (Units==6) {
-		snd = new Audio("audios/unit6/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit6/audio100.mp3");
 	}
 	else if (Units==7) {
-		snd = new Audio("audios/unit7/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit7/audio100.mp3");
 	}
 	else if (Units==8) {
-		snd = new Audio("audios/unit8/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit8/audio100.mp3");
 	}
 	else if (Units==9) {
-		snd = new Audio("audios/unit9/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit9/audio100.mp3");
 	}
 	else if (Units==10) {
-		snd = new Audio("audios/unit10/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit10/audio100.mp3");
 	}
-	else if (Units==11 || Units==13 || Units==15 || Units==17 || Units==19) {
-		snd = new Audio("audios/passages/audio"+audionum+".mp3");
+	else if (Units==11) {
+		snd = new Audio("audios/passages/audio1.mp3");
 	}
 	else if (Units==12) {
-		snd = new Audio("audios/unit12/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit12/audio100.mp3");
+	}
+	else if (Units==13) {
+		snd = new Audio("audios/passages/audio3.mp3");
 	}
 	else if (Units==14) {
-		snd = new Audio("audios/unit14/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit14/audio100.mp3");
+	}
+	else if (Units==15) {
+		snd = new Audio("audios/passages/audio5.mp3");
 	}
 	else if (Units==16) {
-		snd = new Audio("audios/unit16/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit16/audio100.mp3");
+	}
+	else if (Units==17) {
+		snd = new Audio("audios/passages/audio7.mp3");
 	}
 	else if (Units==18) {
-		snd = new Audio("audios/unit18/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit18/audio100.mp3");
+	}
+	else if (Units==19) {
+		snd = new Audio("audios/passages/audio9.mp3");
 	}
 	else if (Units==20) {
-		snd = new Audio("audios/unit20/audio"+audionum+".mp3");
+		snd = new Audio("audios/unit20/audio100.mp3");
 	}
-
+	console.log("found audio is"+Units+" "+snd)
+}
+function playAudio(audionum){
 	
+	
+	let getPlayPause = document.querySelector(".ogmidbuttons");
+
 	
 
 	if (isPlaying == false) {
-		isPlaying = true;
 		snd.play();
+		isPlaying = true;
+		getPlayPause.innerHTML = '<button onclick="playAudio(100);" class="tiny ui blue icon button"><i class="pause icon"></i></button>';
+
+
+	}
+	else{
+		snd.pause();
+		isPlaying = false;
+		getPlayPause.innerHTML = '<button onclick="playAudio(100);" class="tiny ui blue icon button"><i class="play icon"></i></button>';
+
 		
-	
 	}
 	
-	snd.onended = function() {parar()};
-
-	function parar(){
+	snd.onended = function(){
 		isPlaying = false;
-		console.log("lmao");
-}
+		getPlayPause.innerHTML = '<button onclick="playAudio(100);" class="tiny ui blue icon button"><i class="play icon"></i></button>';
+	};
 
+
+
+}
+	function parar(){
+		
+		console.log("lmao");
 }
 var HttpRequest=function (type,url,jsonParams,fun) {
 	try{		
@@ -154,6 +184,8 @@ var HttpRequest=function (type,url,jsonParams,fun) {
 		swal('',ex.message,'error')
 	}
 }
+
+
 
 
 // var vocabularyOrExpressions = true;

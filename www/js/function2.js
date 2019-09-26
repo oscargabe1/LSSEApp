@@ -590,7 +590,14 @@ let answers1 = "aylmao";
 
 
 function newType(){
-	if (currentype == '1 3'||currentype == '2 2') {}
+	if (currentype == '1 3'||currentype == '2 2'||currentype == '3 3'||currentype == '5 2'||currentype == '6 2'||currentype == '7 3'
+		||currentype == '8 3'||currentype == '9 4'||currentype == '10 1') {
+		location.href='u'+ExUnits+'.html';
+	}
+	else if (currentype == '11 3') {location.href='zu1.html';}
+	else if (currentype == '12 2') {location.href='zu2.html';}
+	else if (currentype == '16 2') {location.href='zu6.html';}
+	else if (currentype == '19 1') {location.href='zu9.html';}
 		else{
 				console.log("NEW TYPE"+ExType);
     ExType = ExType + 1;

@@ -65,7 +65,75 @@ function Unit20(){
 
 var isPlaying = false;
 var snd;
+function playAudio(audionum){
+	var snd;
+	if (Units==1) {
+		snd = new Audio("audios/unit1/audio"+audionum+".mp3");
+	}
+	else if (Units==2) {
+		snd = new Audio("audios/unit2/audio"+audionum+".mp3");
+	}
+	else if (Units==3) {
+		snd = new Audio("audios/unit3/audio"+audionum+".mp3");
+	}
+	else if (Units==4) {
+		snd = new Audio("audios/unit4/audio"+audionum+".mp3");
+	}
+	else if (Units==5) {
+		snd = new Audio("audios/unit5/audio"+audionum+".mp3");
+	}
+	else if (Units==6) {
+		snd = new Audio("audios/unit6/audio"+audionum+".mp3");
+	}
+	else if (Units==7) {
+		snd = new Audio("audios/unit7/audio"+audionum+".mp3");
+	}
+	else if (Units==8) {
+		snd = new Audio("audios/unit8/audio"+audionum+".mp3");
+	}
+	else if (Units==9) {
+		snd = new Audio("audios/unit9/audio"+audionum+".mp3");
+	}
+	else if (Units==10) {
+		snd = new Audio("audios/unit10/audio"+audionum+".mp3");
+	}
+	else if (Units==11 || Units==13 || Units==15 || Units==17 || Units==19) {
+		snd = new Audio("audios/passages/audio"+audionum+".mp3");
+	}
+	else if (Units==12) {
+		snd = new Audio("audios/unit12/audio"+audionum+".mp3");
+	}
+	else if (Units==14) {
+		snd = new Audio("audios/unit14/audio"+audionum+".mp3");
+	}
+	else if (Units==16) {
+		snd = new Audio("audios/unit16/audio"+audionum+".mp3");
+	}
+	else if (Units==18) {
+		snd = new Audio("audios/unit18/audio"+audionum+".mp3");
+	}
+	else if (Units==20) {
+		snd = new Audio("audios/unit20/audio"+audionum+".mp3");
+	}
 
+	
+	
+
+	if (isPlaying == false) {
+		isPlaying = true;
+		snd.play();
+		
+	
+	}
+	
+	snd.onended = function() {parar()};
+
+	function parar(){
+		isPlaying = false;
+		console.log("lmao");
+}
+
+}
 function findAudio(){
 	if (Units==1) {
 		snd = new Audio("audios/unit1/audio100.mp3");
@@ -129,7 +197,10 @@ function findAudio(){
 	}
 	console.log("found audio is"+Units+" "+snd)
 }
-function playAudio(audionum){
+
+
+function playAudioP(audionum){
+	
 	
 	
 	let getPlayPause = document.querySelector(".ogmidbuttons");
@@ -139,21 +210,21 @@ function playAudio(audionum){
 	if (isPlaying == false) {
 		snd.play();
 		isPlaying = true;
-		getPlayPause.innerHTML = '<button onclick="playAudio(100);" class="tiny ui blue icon button"><i class="pause icon"></i></button>';
+		getPlayPause.innerHTML = '<button onclick="playAudioP(100);" class="tiny ui blue icon button"><i class="pause icon"></i></button>';
 
 
 	}
 	else{
 		snd.pause();
 		isPlaying = false;
-		getPlayPause.innerHTML = '<button onclick="playAudio(100);" class="tiny ui blue icon button"><i class="play icon"></i></button>';
+		getPlayPause.innerHTML = '<button onclick="playAudioP(100);" class="tiny ui blue icon button"><i class="play icon"></i></button>';
 
 		
 	}
 	
 	snd.onended = function(){
 		isPlaying = false;
-		getPlayPause.innerHTML = '<button onclick="playAudio(100);" class="tiny ui blue icon button"><i class="play icon"></i></button>';
+		getPlayPause.innerHTML = '<button onclick="playAudioP(100);" class="tiny ui blue icon button"><i class="play icon"></i></button>';
 	};
 
 
